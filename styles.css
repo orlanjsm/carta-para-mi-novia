@@ -167,6 +167,14 @@ strong {
     background-color: #ff79b0;
     transform: scale(1.1);
 }
+/* Ajustar el tamaño de la imagen */
+.imagenes {
+    width: 50%; /* Ajusta el tamaño al 50% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Hace que la imagen se muestre correctamente */
+    margin: 0 auto; /* Centra la imagen */
+}
+
 .decorative-heart {
     width: 300px;  /* Ajusta el tamaño de la imagen aquí */
     height: auto;   /* Mantiene la proporción original */
