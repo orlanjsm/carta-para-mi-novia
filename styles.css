@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.envelope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Añadimos profundidad a la animación */
+}
+
+.letter {
+    width: 750px; /* Carta más grande para que entren los párrafos */
+    height: 600px; /* Mayor altura */
+    position: relative;
+    transform-origin: top;
+    transition: all 1s ease-in-out;
+    background-color: #ffcccb; /* Rosado suave */
+    border-radius: 20px; /* Bordes redondeados para la carta */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border: 5px solid #d6336c; /* Borde rosado alrededor de la carta */
+}
+
+.letter-front {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.letter-inside {
+    color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(-100%); /* Inicialmente fuera de vista */
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    box-sizing: border-box;
+    padding: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: justify;
+}
+
+.letter-inside h2 {
+    color: #d6336c;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem; /* Tamaño de fuente mayor para el título */
+    text-align: center;
+}
+
+.letter-inside p {
+    font-size: 1rem; /* Fuente más pequeña para los párrafos adicionales */
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: justify;
+    max-width: 90%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #c72d5f;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Corazoncitos de decoración */
+.heart {
+    position: absolute;
+    font-size: 30px;
+    color: #d6336c;
+    opacity: 0.5;
+}
+
+.heart-1 {
+    top: 50px;
+    left: 40px;
+}
+
+.heart-2 {
+    top: 50px;
+    right: 40px;
+}
+
+.heart-3 {
+    bottom: 40px;
+    left: 40px;
+}
+
+.heart-4 {
+    bottom: 40px;
+    right: 40px;
+}
+
+/* Mejorar el borde para una carta más bonita */
+.letter {
+    border: 5px solid #d6336c; /* Borde rosado */
+    border-radius: 20px; /* Bordes redondeados */
+}
+/* Estilo para el texto "Para la más hermosa" */
+#topText {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Pacifico', sans-serif;
+    color: #ff4081;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón "Abrir carta" */
+#openLetterBtn {
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+#openLetterBtn:hover {
+    background-color: #ff79b0;
+    transform: scale(1.1);
+}
+.decorative-heart {
+    width: 300px;  /* Ajusta el tamaño de la imagen aquí */
+    height: auto;   /* Mantiene la proporción original */
+}
