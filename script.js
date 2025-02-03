@@ -12,7 +12,7 @@ document.getElementById("openLetterBtn").addEventListener("click", function() {
     letter.style.transform = "scale(1)";  // La carta se despliega
 
     // Ocultamos la imagen
-    image.style.display = "none"; // Esto oculta la imagen
+    imagenCarta.style.display = "none"; // La imagen desaparece
 
     // Ocultamos el texto "Para la más hermosa"
     topText.style.display = "none"; // Esto oculta el texto
